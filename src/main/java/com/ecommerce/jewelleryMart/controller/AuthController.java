@@ -37,6 +37,7 @@ public class AuthController {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
         response.put("message", "User registered successfully!");
+        String mongo_password = "2e5GrxT6lI5b0IK2";
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
